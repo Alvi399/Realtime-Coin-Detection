@@ -1,7 +1,6 @@
-﻿cvzone==1.6.1
-numpy==1.26.4
-opencv-python-headless==4.10.0.84
-streamlit==1.33.0
-streamlit-webrtc==0.47.7
-freeglut3-dev
+﻿cvzone
+numpy
+opencv-python-headless
+streamlit
+streamlit-webrtc
 libgtk2.0-dev
