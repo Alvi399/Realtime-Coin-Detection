@@ -10,7 +10,6 @@ class VideoTransformer(VideoTransformerBase):
         self.threshold1 = threshold1
         self.threshold2 = threshold2
         self.coin_areas = coin_areas
-        self.logs = []
 
     def preProcessing(self, img):
         imgPre = cv2.GaussianBlur(img, (5, 5), 3)
@@ -36,7 +35,7 @@ class VideoTransformer(VideoTransformerBase):
 
                 if len(approx) > 7:
                     area = con['area']
-                    print(f'Area: {area}')
+                    # print(f'Area: {area}')
                     if area > 1000:
                         for value, range_ in self.coin_areas.items():
                             if range_[0] <= area < range_[1]:
@@ -50,8 +49,6 @@ class VideoTransformer(VideoTransformerBase):
 
         return imageStacked
 
-    def get_logs(self):
-        return self.logs
 
 st.title("Proyek Deteksi Koin dengan Streamlit dan OpenCV")
 # Sidebar for thresholds and coin area settings
